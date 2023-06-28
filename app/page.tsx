@@ -1,7 +1,5 @@
 const Home = () => (
-  <marquee className="text-2xl">
-    This is the totally sick home page broooo
-  </marquee>
+  <div className="text-2xl">This is the totally sick home page broooo</div>
 );
 
 export default Home;
