@@ -1,5 +1,3 @@
-const Home = () => (
-  <div className="text-2xl">This is the totally sick home page broooo</div>
-);
+const Home = () => <div className="text-2xl">Book Tracker Home Page</div>;
 
 export default Home;
