@@ -30,4 +30,6 @@ export async function POST(req: NextRequest) {
   } else {
     return new Response("Bad request", { status: 400 });
   }
+
+  return new Response("", { status: 500 });
 }
