@@ -18,6 +18,8 @@ export async function GET(request: NextRequest) {
       }
     );
 
+    console.log(resp);
+
     if (resp.status === 200) {
       const body = await resp.json();
 
