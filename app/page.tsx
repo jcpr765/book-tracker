@@ -6,7 +6,8 @@ export default async function Home() {
   return (
     <>
       <div className="text-2xl">Book Tracker Home Page</div>
-      {session?.user?.name ? <>{session.user.name}</> : <>Not logged in</>}
+      <br />
+      {session?.user?.name ? <>Hi {session.user.name}</> : <>Please log in</>}
     </>
   );
 }
