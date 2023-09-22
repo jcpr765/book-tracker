@@ -41,6 +41,13 @@ export default function NavMenu() {
             Home
           </li>
         </Link>
+        <Link href="/search">
+          <li
+            className={pathname === "/search" ? ACTIVE_ROUTE : INACTIVE_ROUTE}
+          >
+            Book Search
+          </li>
+        </Link>
       </ul>
     </div>
   );
