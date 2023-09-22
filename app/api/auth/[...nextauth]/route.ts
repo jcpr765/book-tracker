@@ -3,7 +3,7 @@ import CredentialsProvider from "next-auth/providers/credentials";
 import GitHubProvider from "next-auth/providers/github";
 import GoogleProvider from "next-auth/providers/google";
 
-const handler = NextAuth({
+export const authOptions = {
   providers: [
     CredentialsProvider({
       name: "Email & Password",
@@ -36,6 +36,8 @@ const handler = NextAuth({
       clientSecret: process.env.GITHUB_CLIENT_SECRET ?? "",
     }),
   ],
-});
+};
+
+export const handler = NextAuth(authOptions);
 
 export { handler as GET, handler as POST };
