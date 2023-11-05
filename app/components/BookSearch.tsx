@@ -1,11 +1,12 @@
 "use client";
 
 import { useState } from "react";
+import { BookList } from "../common/types";
 import BookSearchList from "./BookSearchList";
 
 export async function fetchBooks(
   text: string,
-  setBookData: (body: any) => void
+  setBookData: (body: BookList) => void
 ) {
   try {
     const resp = await fetch(`api/fetchBooks?query=${text}`);
@@ -23,7 +24,7 @@ export async function fetchBooks(
 export default function BookSearch() {
   const [text, setText] = useState("");
 
-  const [bookData, setBookData] = useState(null);
+  const [bookData, setBookData] = useState<BookList | null>(null);
 
   return (
     <>
